@@ -56,45 +56,6 @@ public class ClientController implements Initializable {
 
     }
 
-   /* @FXML
-    protected void onEditButtonClick() {
-        // Récupérer le client sélectionné dans la table
-        Client selectedClient = mytab.getSelectionModel().getSelectedItem();
-
-        if (selectedClient == null) {
-            // Le client n'a pas été sélectionné, afficher un message d'erreur
-            // ou simplement sortir de la méthode sans rien faire.
-            return;
-        }
-
-        // Afficher les informations du client dans les champs de texte
-        nom.setText(selectedClient.getNom());
-        tele.setText(selectedClient.getTelepehone());
-
-        // Modifier le client lorsque le bouton "Modifier" est cliqué
-        ClientDAO clientDAO = null;
-
-        try {
-            clientDAO = new ClientDAO();
-
-            // Supprimer le client existant
-            clientDAO.delete(selectedClient);
-
-            // Créer un nouveau client avec les informations modifiées
-            Client updatedClient = new Client(selectedClient.getId_client(), nom.getText(), tele.getText());
-
-            // Enregistrer le nouveau client dans la base de données
-            clientDAO.save(updatedClient);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        // Mettre à jour la table pour afficher les modifications
-        UpdateTable();
-    }*/
-
-
     @FXML
     protected void onUpdateButtonClick() {
         Client selectedClient = mytab.getSelectionModel().getSelectedItem();
@@ -148,43 +109,7 @@ public class ClientController implements Initializable {
             UpdateTable();
         }
     }
-   /* @FXML
-    protected void onEditButtonClick() {
-        // Récupérer le client sélectionné dans la table
-        Client selectedClient = mytab.getSelectionModel().getSelectedItem();
-
-        if (selectedClient == null) {
-            // Le client n'a pas été sélectionné, afficher un message d'erreur
-            // ou simplement sortir de la méthode sans rien faire.
-            return;
-        }
-
-        // Afficher les informations du client dans les champs de texte
-        nom.setText(selectedClient.getNom());
-        tele.setText(selectedClient.getTelepehone());
-
-        // Modifier le client lorsque le bouton "Modifier" est cliqué
-        ClientDAO clientDAO = null;
-
-        try {
-            clientDAO = new ClientDAO();
-
-            // Supprimer le client existant
-            clientDAO.delete(selectedClient);
-
-            // Créer un nouveau client avec les informations modifiées
-            Client updatedClient = new Client(selectedClient.getId_client(), nom.getText(), tele.getText());
-
-            // Enregistrer le nouveau client dans la base de données
-            clientDAO.save(updatedClient);
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        UpdateTable();
-    }*/
-
+   
 
     @FXML
     protected void onDeleteButtonClick() {
