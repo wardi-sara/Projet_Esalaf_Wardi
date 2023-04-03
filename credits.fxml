@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="445.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.CreditsController">
+    <children>
+        <TableView fx:id="creditsTable" layoutX="21.0" layoutY="72.0" prefHeight="302.0" prefWidth="396.0">
+            <columns>
+                <TableColumn fx:id="clientNameColumn" prefWidth="100.0" text="Client Name" />
+                <TableColumn fx:id="productNameColumn" prefWidth="100.0" text="Product Name" />
+                <TableColumn fx:id="creditAmountColumn" prefWidth="100.0" text="Credit Amount" />
+                <TableColumn fx:id="creditDateColumn" prefWidth="100.0" text="Credit Date" />
+
+            </columns>
+        </TableView>
+        <Button layoutX="576.0" layoutY="330.0" mnemonicParsing="false" onAction="#ajouterCredit" style="-fx-background-color: pink;" text="add Credit" />
+        <Button layoutX="333.0" layoutY="372.0" mnemonicParsing="false" onAction="#onUpdateCreditButtonClick" style="-fx-background-color: pink;" text="Updat Credit" />
+        <Button layoutX="21.0" layoutY="372.0" mnemonicParsing="false" onAction="#deleteButtonClick" style="-fx-background-color: pink;" text="Delet Credit" />
+        <Label layoutX="536.0" layoutY="87.0" text="Nom Client" />
+        <Label layoutX="532.0" layoutY="138.0" text="Nom Produit" />
+        <Label layoutX="538.0" layoutY="187.0" text="Credit" />
+        
+        <TextField fx:id="qte" layoutX="533.0" layoutY="210.0" prefHeight="26.0" prefWidth="174.0" />
+        <Label layoutX="541.0" layoutY="244.0" text="Date" />
+
+      <ChoiceBox fx:id="nomproduit" layoutX="531.0" layoutY="162.0" prefHeight="25.0" prefWidth="174.0" />
+      <ChoiceBox fx:id="nomclient" layoutX="533.0" layoutY="113.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="date" layoutX="533.0" layoutY="261.0" />
+      <Label layoutX="61.0" layoutY="25.0" text=" Crédits des Clients" textFill="#5b3737">
+         <font>
+            <Font name="Bookman Old Style Italic" size="36.0" />
+         </font>
+      </Label>
+
+
+
+
+
+
+
+    </children>
+</AnchorPane>
